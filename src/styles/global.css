@@ -380,20 +380,15 @@ main.container {
   color: #46515f;
 }
 
-/* 与标题/正文同列同宽（右栏），不跨 badge 列、不撑满视口 */
+/* 仅在右栏（publication-body）内：摘要按钮在正文上方，与正文左缘对齐 */
 .publication-abstract {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 118px minmax(0, 1fr);
-  gap: 1rem;
-  align-items: start;
   margin-top: 0.55rem;
 }
 
 .publication-abstract summary {
   display: inline-flex;
   align-items: center;
-  align-self: start;
+  padding-left: 0.9rem;
   cursor: pointer;
   color: var(--accent);
   font-size: 0.78rem;
@@ -410,7 +405,7 @@ main.container {
 }
 
 .publication-abstract-body {
-  margin-top: 0;
+  margin-top: 0.35rem;
   min-width: 0;
   padding-left: 0.9rem;
   padding-right: 0;
@@ -464,11 +459,6 @@ main.container {
 
   .publication-marker {
     padding-top: 0;
-  }
-
-  .publication-abstract {
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
   }
 }
 
