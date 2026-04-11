@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import PublicationList from "../components/PublicationList.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const withBase = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+const allEntries = (await getCollection("publications")).sort(
+  (left, right) => right.data.year - left.data.year || left.data.title.localeCompare(right.data.title),
+);
+
+const sections = [
+  {
+    key: "publication",
+    title: "Publications",
+    description: "Published or accepted work.",
+  },
+  {
+    key: "working-paper",
+    title: "Working Papers",
+    description: "Circulating drafts and current manuscripts.",
+  },
+  {
+    key: "work-in-progress",
+    title: "Work in Progress",
+    description: "Early-stage projects in the pipeline.",
+  },
+] as const;
+---
+
+<BaseLayout title="Publications" description="Publications, working papers, and work in progress.">
+  <section class="content-panel">
+    <div class="section-heading">
+      <div>
+        <h2>Publications</h2>
+        <p class="muted">
+          All entries are managed as Markdown files, so adding a new paper only requires one new content file.
+        </p>
+      </div>
+      <a class="pill-link" href={`${import.meta.env.BASE_URL}#about`}>Back to About</a>
+    </div>
+
+    {sections.map((section) => (
+      <section class="publication-group">
+        <div class="section-heading">
+          <div>
+            <h3>{section.title}</h3>
+            <p class="muted">{section.description}</p>
+          </div>
+          {section.key === "publication" ? <a class="pill-link" href={withBase("/")}>Home</a> : null}
+        </div>
+        <PublicationList
+          entries={allEntries.filter((entry) => entry.data.category === section.key)}
+          emptyMessage={`No ${section.title.toLowerCase()} yet.`}
+        />
+      </section>
+    ))}
+  </section>
+</BaseLayout>

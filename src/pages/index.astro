@@ -1,0 +1,85 @@
+---
+import { getCollection } from "astro:content";
+import PublicationList from "../components/PublicationList.astro";
+import { bio, researchAreas, siteConfig, socialLinks } from "../data/site";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const withBase = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+const allPublications = await getCollection("publications");
+const featuredPublications = allPublications
+  .filter((entry) => entry.data.featured || entry.data.category === "publication")
+  .sort((left, right) => right.data.year - left.data.year || left.data.title.localeCompare(right.data.title))
+  .slice(0, 3);
+---
+
+<BaseLayout description={siteConfig.description}>
+  <section class="hero">
+    <div>
+      <div class="hero-meta">
+        <span>{siteConfig.role}</span>
+        <span>{siteConfig.affiliation}</span>
+        <span>{siteConfig.location}</span>
+      </div>
+      <h1>{siteConfig.name}</h1>
+      <p>{siteConfig.description}</p>
+      <div class="hero-actions">
+        <a class="button-link primary" href={withBase("/publications/")}>View Publications</a>
+        <a class="button-link" href="#about">About</a>
+      </div>
+    </div>
+
+    <aside class="hero-aside">
+      <div class="avatar-card">
+        <div class="avatar-placeholder" aria-hidden="true">
+          {siteConfig.name.slice(0, 1)}
+        </div>
+      </div>
+      <div class="content-panel">
+        <h2>Links</h2>
+        <div class="link-list">
+          {socialLinks.map((link) => (
+            <a
+              class="pill-link"
+              href={link.href}
+              target={link.href.startsWith("http") ? "_blank" : undefined}
+              rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <div class="section-grid">
+    <section class="section-card" id="about">
+      <div class="section-heading">
+        <h2>About</h2>
+      </div>
+      {bio.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+    </section>
+
+    <aside class="section-card">
+      <h2>Research Interests</h2>
+      <ul class="tag-list">
+        {researchAreas.map((area) => (
+          <li>{area}</li>
+        ))}
+      </ul>
+    </aside>
+  </div>
+
+  <section class="content-panel">
+    <div class="section-heading">
+      <div>
+        <h2>Selected Publications</h2>
+        <p class="muted">Highlight a few representative papers here and keep the full list on the publications page.</p>
+      </div>
+      <a class="pill-link" href={withBase("/publications/")}>See All</a>
+    </div>
+    <PublicationList entries={featuredPublications} emptyMessage="Add publication Markdown files to show selected work." />
+  </section>
+</BaseLayout>

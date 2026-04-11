@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  entries: CollectionEntry<"publications">[];
+  emptyMessage?: string;
+}
+
+const { entries, emptyMessage = "No entries available yet." } = Astro.props;
+
+const linkLabels = {
+  paper: "Paper",
+  preprint: "Preprint",
+  code: "Code",
+  slides: "Slides",
+  project: "Project",
+  doi: "DOI",
+} as const;
+
+const getLinks = (entry: CollectionEntry<"publications">) =>
+  Object.entries(entry.data.links ?? {}).filter(
+    (item): item is [keyof typeof linkLabels, string] =>
+      typeof item[1] === "string" && item[1].length > 0,
+  );
+---
+
+{entries.length > 0 ? (
+  <ul class="publication-list">
+    {entries.map((entry) => {
+      const meta = [entry.data.venue, entry.data.status].filter(Boolean);
+      const links = getLinks(entry);
+
+      return (
+        <li class="publication-card">
+          <div class="publication-meta">
+            <span class="meta-chip">{entry.data.year}</span>
+            {meta.map((item) => (
+              <span class="meta-chip">{item}</span>
+            ))}
+          </div>
+          <h3>{entry.data.title}</h3>
+          <p class="publication-authors">{entry.data.authors.join(", ")}</p>
+          {entry.data.abstract ? (
+            <p class="publication-description">{entry.data.abstract}</p>
+          ) : null}
+          {links.length > 0 ? (
+            <div class="link-list">
+              {links.map(([key, href]) => (
+                <a class="pill-link" href={href} target="_blank" rel="noreferrer">
+                  {linkLabels[key]}
+                </a>
+              ))}
+            </div>
+          ) : null}
+        </li>
+      );
+    })}
+  </ul>
+) : (
+  <div class="empty-state">{emptyMessage}</div>
+)}
