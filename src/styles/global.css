@@ -290,12 +290,20 @@ main.container {
   min-width: 0;
 }
 
+.publication-body > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.publication-body > * + * {
+  margin-top: 0.42rem;
+}
+
 .publication-topline {
   display: flex;
   align-items: start;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-bottom: 0.22rem;
 }
 
 .publication-title {
@@ -335,7 +343,6 @@ main.container {
 }
 
 .publication-authors-line {
-  margin: 0 0 0.2rem;
   color: #3f4852;
   font-size: 0.9375rem;
   font-weight: 400;
@@ -350,7 +357,7 @@ main.container {
 }
 
 .publication-notes {
-  margin-top: 0.42rem;
+  margin: 0;
 }
 
 .publication-note {
@@ -376,7 +383,7 @@ main.container {
 
 /* 媒体报道：与条目说明风格一致，逐条分行 */
 .publication-media-block {
-  margin-top: 0.42rem;
+  margin: 0;
 }
 
 .publication-media-heading {
@@ -412,7 +419,7 @@ main.container {
 
 /* 仅在右栏内：摘要按钮与标题、作者行左对齐；正文仍保留左侧竖线与缩进 */
 .publication-abstract {
-  margin-top: 0.55rem;
+  margin: 0;
 }
 
 .publication-abstract summary {
