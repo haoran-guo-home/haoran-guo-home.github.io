@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { siteConfig } from "../data/site";
 
 interface Props {
   entries: CollectionEntry<"publications">[];
@@ -22,36 +23,89 @@ const getLinks = (entry: CollectionEntry<"publications">) =>
     (item): item is [keyof typeof linkLabels, string] =>
       typeof item[1] === "string" && item[1].length > 0,
   );
+
+/** 作者行：首位为本人时用 “with …” */
+const formatAuthorsLine = (authors: string[]) => {
+  if (authors.length === 0) return "";
+  if (authors.length === 1) return authors[0];
+  const primary = siteConfig.name;
+  if (authors[0] === primary) {
+    const rest = authors.slice(1);
+    return `with ${rest.join(" and ")}`;
+  }
+  return authors.join(", ");
+};
+
+/** 期刊 / 状态行：已发表突出 venue，否则突出 status */
+const venueStatusParts = (entry: CollectionEntry<"publications">) => {
+  const { category, venue, status, year } = entry.data;
+  if (category === "publication" && venue) {
+    return { lead: venue, tail: ` (${year})` };
+  }
+  if (status) {
+    return { lead: status, tail: "" };
+  }
+  if (venue) {
+    return { lead: venue, tail: ` (${year})` };
+  }
+  return { lead: String(year), tail: "" };
+};
 ---
 
 {entries.length > 0 ? (
-  <ul class="publication-list">
+  <ul class="publication-list publication-list--academic">
     {entries.map((entry) => {
-      const meta = [entry.data.venue, entry.data.status].filter(Boolean);
       const links = getLinks(entry);
+      const { lead, tail } = venueStatusParts(entry);
+      const keywords = entry.data.keywords ?? [];
+      const bullets = entry.data.bullets ?? [];
 
       return (
-        <li class="publication-card">
-          <div class="publication-meta">
-            <span class="meta-chip">{entry.data.year}</span>
-            {meta.map((item) => (
-              <span class="meta-chip">{item}</span>
-            ))}
-          </div>
-          <h3>{entry.data.title}</h3>
-          <p class="publication-authors">{entry.data.authors.join(", ")}</p>
-          {entry.data.abstract ? (
-            <p class="publication-description">{entry.data.abstract}</p>
-          ) : null}
-          {links.length > 0 ? (
-            <div class="link-list">
-              {links.map(([key, href]) => (
-                <a class="pill-link" href={href} target="_blank" rel="noreferrer">
-                  {linkLabels[key]}
-                </a>
-              ))}
-            </div>
-          ) : null}
+        <li class="publication-entry">
+          <article class="publication-entry-inner">
+            <h3 class="publication-title">{entry.data.title}</h3>
+            <p class="publication-authors-line">{formatAuthorsLine(entry.data.authors)}</p>
+            <p class="publication-venue-status">
+              <strong>{lead}</strong>
+              {tail}
+            </p>
+            {keywords.length > 0 ? (
+              <p class="publication-keywords">
+                <span class="publication-keywords-label">Keywords:</span> {keywords.join(", ")}
+              </p>
+            ) : null}
+            {bullets.length > 0 ? (
+              <ul class="publication-bullets">
+                {bullets.map((item) => (
+                  <li>
+                    {item.highlight ? (
+                      <>
+                        <span class="publication-award">{item.highlight}</span>
+                        {item.text ? <> {item.text}</> : null}
+                      </>
+                    ) : (
+                      item.text
+                    )}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {(entry.data.abstract || links.length > 0) ? (
+              <div class="publication-actions">
+                {entry.data.abstract ? (
+                  <details class="publication-abstract">
+                    <summary>[Abstract]</summary>
+                    <div class="publication-abstract-body">{entry.data.abstract}</div>
+                  </details>
+                ) : null}
+                {links.map(([key, href]) => (
+                  <a class="publication-bracket-link" href={href} target="_blank" rel="noreferrer">
+                    [{linkLabels[key]}]
+                  </a>
+                ))}
+              </div>
+            ) : null}
+          </article>
         </li>
       );
     })}

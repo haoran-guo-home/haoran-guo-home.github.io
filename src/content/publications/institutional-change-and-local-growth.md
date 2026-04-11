@@ -10,6 +10,10 @@ year: 2023
 category: publication
 venue: "Journal of Marine Science and Engineering 11.12"
 abstract: "Published work on optimizing ship fouling cleaning with a bi-level programming approach."
+keywords:
+  - "ship fouling"
+  - "bi-level programming"
+  - "maintenance optimization"
 featured: true
 ---
 
