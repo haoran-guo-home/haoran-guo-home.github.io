@@ -17,15 +17,7 @@ const {
 const pageTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
 const baseUrl = import.meta.env.BASE_URL;
 const withBase = (path: string) => `${baseUrl}${path.replace(/^\//, "")}`;
-const relativePathname =
-  baseUrl !== "/" && pathname.startsWith(baseUrl)
-    ? `/${pathname.slice(baseUrl.length).replace(/^\/?/, "")}`
-    : pathname;
 const canonicalUrl = new URL(pathname.replace(/^\//, ""), siteConfig.siteUrl).toString();
-const navItems = [
-  { label: "About", href: `${baseUrl}#about`, active: relativePathname === "/" },
-  { label: "Research", href: `${baseUrl}#research`, active: relativePathname === "/" },
-];
 ---
 
 <!doctype html>
@@ -46,24 +38,6 @@ const navItems = [
   </head>
   <body>
     <div class="site-shell">
-      <header class="site-header">
-        <div class="container header-inner">
-          <a class="site-brand" href={withBase("/")}>
-            <span class="site-brand-name">{siteConfig.name}</span>
-            <span class="site-brand-role">{siteConfig.role}</span>
-          </a>
-          <nav aria-label="Primary navigation">
-            <ul class="site-nav">
-              {navItems.map((item) => (
-                <li>
-                  <a class:list={{ active: item.active }} href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </header>
-
       <main class="container">
         <slot />
       </main>
