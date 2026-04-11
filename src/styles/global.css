@@ -343,10 +343,10 @@ main.container {
 
 .publication-detail-line {
   margin: 0;
-  color: #454c55;
-  /* 期刊 / 状态行：略深于全站 muted，便于扫读 */
+  color: var(--text-muted);
+  /* 与 .publication-authors-line 一致 */
   font-size: 0.9375rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .publication-notes {
@@ -355,31 +355,31 @@ main.container {
 
 .publication-note {
   margin: 0.1rem 0;
-  color: #555c64;
-  /* 奖项与媒体报道：提高对比度 */
+  color: #7a8088;
+  /* 与 .publication-authors-line 一致，便于阅读奖项与媒体报道 */
   font-size: 0.9375rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
 }
 
 .publication-award {
   margin-right: 0.2rem;
-  color: #6d5518;
-  font-weight: 400;
+  color: #8a6a22;
+  font-weight: 300;
 }
 
 .publication-media-label {
   color: inherit;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .publication-inline-link {
-  color: #4a525c;
+  color: #6a7380;
 }
 
 .publication-inline-link:hover {
-  color: #323940;
+  color: #46515f;
 }
 
 /* 仅在右栏内：摘要按钮与标题、作者行左对齐；正文仍保留左侧竖线与缩进 */
