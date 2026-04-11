@@ -24,7 +24,7 @@ const relativePathname =
 const canonicalUrl = new URL(pathname.replace(/^\//, ""), siteConfig.siteUrl).toString();
 const navItems = [
   { label: "About", href: `${baseUrl}#about`, active: relativePathname === "/" },
-  { label: "Publications", href: withBase("/publications/"), active: relativePathname.startsWith("/publications") },
+  { label: "Research", href: `${baseUrl}#research`, active: relativePathname === "/" },
 ];
 ---
 
@@ -48,7 +48,10 @@ const navItems = [
     <div class="site-shell">
       <header class="site-header">
         <div class="container header-inner">
-          <a class="site-brand" href={withBase("/")}>{siteConfig.name}</a>
+          <a class="site-brand" href={withBase("/")}>
+            <span class="site-brand-name">{siteConfig.name}</span>
+            <span class="site-brand-role">{siteConfig.role}</span>
+          </a>
           <nav aria-label="Primary navigation">
             <ul class="site-nav">
               {navItems.map((item) => (

@@ -27,6 +27,10 @@ export const socialLinks = [
     href: "mailto:ghr24@mails.tsinghua.edu.cn",
   },
   {
+    label: "CV",
+    href: "/haoran-guo-cv.pdf",
+  },
+  {
     label: "Google Scholar",
     href: "https://scholar.google.com/citations?user=mw29FU4AAAAJ&hl=zh-CN",
   },
