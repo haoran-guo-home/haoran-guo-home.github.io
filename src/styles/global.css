@@ -76,10 +76,11 @@ ul {
 }
 
 main.container {
-  padding: 3.3rem 0 4rem;
+  padding: 2.25rem 0 4rem;
 }
 
 .intro-section {
+  padding-top: 1.05rem;
   padding-bottom: 2.75rem;
 }
 
@@ -509,10 +510,11 @@ main.container {
   }
 
   main.container {
-    padding: 2.5rem 0 3rem;
+    padding: 1.8rem 0 3rem;
   }
 
   .intro-section {
+    padding-top: 0.7rem;
     padding-bottom: 2rem;
   }
 
