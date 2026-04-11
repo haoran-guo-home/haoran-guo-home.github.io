@@ -59,6 +59,7 @@ const venueStatusParts = (entry: CollectionEntry<"publications">) => {
       const { lead, tail } = venueStatusParts(entry);
       const keywords = entry.data.keywords ?? [];
       const bullets = entry.data.bullets ?? [];
+      const mediaLinks = entry.data.mediaLinks ?? [];
 
       return (
         <li class="publication-entry">
@@ -74,7 +75,7 @@ const venueStatusParts = (entry: CollectionEntry<"publications">) => {
                 <span class="publication-keywords-label">Keywords:</span> {keywords.join(", ")}
               </p>
             ) : null}
-            {bullets.length > 0 ? (
+            {bullets.length > 0 || mediaLinks.length > 0 ? (
               <ul class="publication-bullets">
                 {bullets.map((item) => (
                   <li>
@@ -88,6 +89,20 @@ const venueStatusParts = (entry: CollectionEntry<"publications">) => {
                     )}
                   </li>
                 ))}
+                {mediaLinks.length > 0 ? (
+                  <li class="publication-media">
+                    <span class="publication-media-label">Media:</span>{" "}
+                    {mediaLinks.map((m, index) => (
+                      <span class="publication-media-fragment">
+                        {index > 0 ? <span class="publication-media-sep">; </span> : null}
+                        <a class="publication-inline-link" href={m.href} target="_blank" rel="noreferrer">
+                          {m.label}
+                        </a>
+                        {m.tail ? <span>{m.tail}</span> : null}
+                      </span>
+                    ))}
+                  </li>
+                ) : null}
               </ul>
             ) : null}
             {(entry.data.abstract || links.length > 0) ? (

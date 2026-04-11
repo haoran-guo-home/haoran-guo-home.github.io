@@ -400,6 +400,21 @@ main.container {
   color: #444444;
 }
 
+.publication-media-label {
+  font-weight: 700;
+  color: #444444;
+}
+
+.publication-inline-link {
+  color: #666666;
+  text-decoration: none;
+}
+
+.publication-inline-link:hover {
+  text-decoration: underline;
+  color: #444444;
+}
+
 .publication-abstract {
   display: inline-block;
   margin: 0;

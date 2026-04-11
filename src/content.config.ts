@@ -34,6 +34,16 @@ const publications = defineCollection({
         }),
       )
       .optional(),
+    /** 媒体报道等多条外链，展示在条目圆点列表末尾 */
+    mediaLinks: z
+      .array(
+        z.object({
+          label: z.string(),
+          href: z.string().url(),
+          tail: z.string().optional(),
+        }),
+      )
+      .optional(),
     links: publicationLinksSchema.optional().default({}),
     featured: z.boolean().optional().default(false),
   }),

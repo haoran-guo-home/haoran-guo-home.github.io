@@ -12,8 +12,10 @@ keywords:
   - "last-mile delivery"
   - "overtime control"
   - "integrated prediction-optimization"
+links:
+  paper: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5054050"
 bullets:
-  - highlight: "Winner"
+  - highlight: "Winner,"
     text: "INFORMS Transportation Science & Logistics (TSL) Best Student Paper Award, 2025"
 featured: true
 ---
