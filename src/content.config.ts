@@ -22,7 +22,7 @@ const publications = defineCollection({
     status: z.string().optional(),
     abstract: z.string().optional(),
     /**
-     * 条目下方圆点列表；若提供 highlight，则以栗色粗体显示奖项名等前缀。
+     * 条目下方圆点列表；若提供 highlight，则以栗色显示奖项名等前缀（字重与说明行一致）。
      */
     bullets: z
       .array(
