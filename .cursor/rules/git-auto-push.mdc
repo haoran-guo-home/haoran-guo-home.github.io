@@ -1,0 +1,12 @@
+---
+description: 本仓库在 Agent 完成相关修改后自动 commit 并 push，无需用户再输入 push。
+alwaysApply: true
+---
+
+# Git：改完后自动推送
+
+在本仓库完成与用户请求相关的改动后：
+
+1. 若存在可提交的实质变更：用一句清晰英文写 commit message，执行 `git add`、`git commit`、`git push` 到当前分支的默认 upstream（一般为 `origin/main`）。
+2. 若无变更、仅有格式化噪声、或无法安全推送：说明原因，不要制造空提交。
+3. 推送前确认当前目录为本项目根目录，且 remote 与分支正确。
