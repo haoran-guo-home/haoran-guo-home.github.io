@@ -30,7 +30,7 @@ const researchEntries = (await getCollection("publications")).sort(
           {siteConfig.role} | {siteConfig.affiliation}
         </p>
         {bio.map((paragraph) => (
-          <p class="intro-paragraph">{paragraph}</p>
+          <p class="intro-paragraph" set:html={paragraph} />
         ))}
 
         <div class="research-summary">
