@@ -381,7 +381,7 @@ main.container {
   color: #46515f;
 }
 
-/* 仅在右栏（publication-body）内：摘要按钮在正文上方，与正文左缘对齐 */
+/* 仅在右栏内：摘要按钮与标题、作者行左对齐；正文仍保留左侧竖线与缩进 */
 .publication-abstract {
   margin-top: 0.55rem;
 }
@@ -389,7 +389,6 @@ main.container {
 .publication-abstract summary {
   display: inline-flex;
   align-items: center;
-  padding-left: 0.9rem;
   cursor: pointer;
   color: var(--accent);
   font-size: 0.78rem;
