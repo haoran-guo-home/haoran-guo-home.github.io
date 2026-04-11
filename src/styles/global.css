@@ -76,7 +76,7 @@ ul {
 }
 
 main.container {
-  padding: 2.25rem 0 4rem;
+  padding: 2.65rem 0 4rem;
 }
 
 .intro-section {
@@ -91,7 +91,7 @@ main.container {
 }
 
 .intro-copy h1 {
-  margin-bottom: 0.85rem;
+  margin-bottom: 1.05rem;
   font-size: clamp(2.25rem, 4.2vw, 2.625rem);
   line-height: 1.05;
   letter-spacing: -0.035em;
@@ -509,7 +509,7 @@ main.container {
   }
 
   main.container {
-    padding: 1.8rem 0 3rem;
+    padding: 2rem 0 3rem;
   }
 
   .intro-section {
