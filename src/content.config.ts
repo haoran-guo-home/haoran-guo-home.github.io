@@ -1,4 +1,6 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const publicationLinksSchema = z.object({
   paper: z.string().url().optional(),
@@ -10,7 +12,7 @@ const publicationLinksSchema = z.object({
 });
 
 const publications = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/publications" }),
   schema: z.object({
     title: z.string(),
     authors: z.array(z.string()).min(1),
