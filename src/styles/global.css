@@ -354,16 +354,6 @@ main.container {
   font-weight: 700;
 }
 
-.publication-keywords {
-  margin: 0 0 0.55rem;
-  font-size: 0.8125rem;
-  color: #666666;
-}
-
-.publication-keywords-label {
-  font-weight: 400;
-}
-
 .publication-bullets {
   margin: 0 0 0.65rem;
   padding-left: 1.15rem;

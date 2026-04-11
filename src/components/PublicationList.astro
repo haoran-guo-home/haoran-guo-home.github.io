@@ -57,7 +57,6 @@ const venueStatusParts = (entry: CollectionEntry<"publications">) => {
     {entries.map((entry) => {
       const links = getLinks(entry);
       const { lead, tail } = venueStatusParts(entry);
-      const keywords = entry.data.keywords ?? [];
       const bullets = entry.data.bullets ?? [];
       const mediaLinks = entry.data.mediaLinks ?? [];
 
@@ -70,11 +69,6 @@ const venueStatusParts = (entry: CollectionEntry<"publications">) => {
               <strong>{lead}</strong>
               {tail}
             </p>
-            {keywords.length > 0 ? (
-              <p class="publication-keywords">
-                <span class="publication-keywords-label">Keywords:</span> {keywords.join(", ")}
-              </p>
-            ) : null}
             {bullets.length > 0 || mediaLinks.length > 0 ? (
               <ul class="publication-bullets">
                 {bullets.map((item) => (

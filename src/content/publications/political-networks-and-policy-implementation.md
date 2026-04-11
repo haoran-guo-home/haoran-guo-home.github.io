@@ -9,10 +9,6 @@ year: 2026
 category: work-in-progress
 status: "Work in Progress"
 abstract: "Rethinking inclusive accessibility through mobile amenities in the context of the 15-minute city."
-keywords:
-  - "15-minute city"
-  - "inclusive accessibility"
-  - "mobile amenities"
 featured: true
 ---
 
