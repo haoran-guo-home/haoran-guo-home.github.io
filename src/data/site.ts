@@ -12,7 +12,7 @@ export const siteConfig = {
 
 /** 首段含导师外链时使用 HTML；首页用 set:html 渲染 */
 export const bio = [
-  'I am a PhD student at Tsinghua University. My major is Management Science and Engineering, and I am advised by <a href="https://wei-qi-home.github.io/" target="_blank" rel="noreferrer">Wei Qi</a>. Before starting my PhD, I received my B.E. in Industrial Engineering from Tsinghua University in 2024.',
+  'I am a PhD student in Management Science and Engineering at Tsinghua University, advised by <a href="https://wei-qi-home.github.io/" target="_blank" rel="noreferrer">Prof. Wei Qi</a>. Prior to my doctoral studies, I received a B.E. in Industrial Engineering from Tsinghua University in 2024.',
   "My research focuses on smart and sustainable city operations, data-driven optimization, and analytics for social good.",
 ];
 
