@@ -7,15 +7,15 @@ authors:
 year: 2026
 category: working-paper
 status: "Reject & Resubmit at Management Science"
-abstract: "Research on overtime control in last-mile delivery using an integrated prediction-optimization framework. This paper won the INFORMS Transportation Science & Logistics Best Student Paper Award in 2025."
+abstract: "Integrated prediction-optimization for overtime control in last-mile delivery operations."
 keywords:
   - "last-mile delivery"
   - "overtime control"
   - "integrated prediction-optimization"
 bullets:
-  - highlight: "INFORMS Transportation Science & Logistics Best Student Paper Award"
-    text: "(2025)"
+  - highlight: "Winner"
+    text: "INFORMS Transportation Science & Logistics (TSL) Best Student Paper Award, 2025"
 featured: true
 ---
 
-This entry is based on the publication and award information listed in the March 2026 CV.
+与 2026 年 3 月简历中的条目一致。

@@ -9,15 +9,16 @@ authors:
 year: 2026
 category: working-paper
 status: "Major Revision at Management Science"
-abstract: "Research on facility layout design for enhancing walk appeal in walkable neighborhoods. This paper was a finalist for the INFORMS Public Sector Operations Research Best Paper Award in 2025."
+abstract: "Facility layout design to enhance walk appeal in walkable neighborhoods, using a data-driven approach."
 keywords:
   - "facility layout"
   - "walk appeal"
   - "walkable neighborhoods"
 bullets:
   - highlight: "Finalist"
-    text: "INFORMS Public Sector Operations Research Best Paper Award (2025)"
+    text: "INFORMS Public Sector Operations Research (PSOR) Best Paper Award, 2025"
+  - text: "Media: \"Why walkable neighborhoods aren't just about distance,\" CU Boulder Today."
 featured: true
 ---
 
-Media coverage is noted in the CV and can be added later once the corresponding links are available.
+与 2026 年 3 月简历中的条目一致；中文媒体报道链接见简历 PDF。

@@ -7,13 +7,13 @@ authors:
   - "Wei Qi"
 year: 2026
 category: work-in-progress
-status: "Work in progress"
-abstract: "Current work on inclusive accessibility and mobile amenities in the context of the 15-minute city."
+status: "Work in Progress"
+abstract: "Rethinking inclusive accessibility through mobile amenities in the context of the 15-minute city."
 keywords:
   - "15-minute city"
   - "inclusive accessibility"
   - "mobile amenities"
-featured: false
+featured: true
 ---
 
-This entry is listed as work in progress in the March 2026 CV.
+与 2026 年 3 月简历中的条目一致。
