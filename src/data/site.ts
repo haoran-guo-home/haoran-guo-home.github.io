@@ -6,6 +6,8 @@ export const siteConfig = {
   email: "ghr24@mails.tsinghua.edu.cn",
   description: "Academic homepage for research on smart and sustainable city operations, analytics for social good, and data-driven optimization.",
   siteUrl: "https://example.github.io",
+  /** 头像：文件放在 `public/` 下；不需要照片时改为 `null` 则显示首字母占位 */
+  avatarUrl: "/profile-photo.png",
 };
 
 export const bio = [
@@ -23,5 +25,13 @@ export const socialLinks = [
   {
     label: "Email",
     href: "mailto:ghr24@mails.tsinghua.edu.cn",
+  },
+  {
+    label: "Google Scholar",
+    href: "https://scholar.google.com/citations?user=mw29FU4AAAAJ&hl=zh-CN",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/haoran-guo-3a4906275/",
   },
 ];

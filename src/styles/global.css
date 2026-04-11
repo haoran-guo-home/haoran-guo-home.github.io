@@ -230,6 +230,16 @@ main.container {
   border: 1px solid var(--border);
 }
 
+.avatar-photo {
+  aspect-ratio: 1;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius) - 2px);
+  object-fit: cover;
+  object-position: center 20%;
+  border: 1px solid var(--border);
+}
+
 .section-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);

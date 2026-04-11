@@ -30,9 +30,21 @@ const featuredPublications = allPublications
 
     <aside class="hero-aside">
       <div class="avatar-card">
-        <div class="avatar-placeholder" aria-hidden="true">
-          {siteConfig.name.slice(0, 1)}
-        </div>
+        {siteConfig.avatarUrl ? (
+          <img
+            class="avatar-photo"
+            src={withBase(siteConfig.avatarUrl)}
+            alt={`Portrait of ${siteConfig.name}`}
+            width="480"
+            height="480"
+            loading="eager"
+            decoding="async"
+          />
+        ) : (
+          <div class="avatar-placeholder" aria-hidden="true">
+            {siteConfig.name.slice(0, 1)}
+          </div>
+        )}
       </div>
       <div class="content-panel">
         <h2>Links</h2>
