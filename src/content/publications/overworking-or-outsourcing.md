@@ -4,7 +4,7 @@ authors:
   - "Haoran Guo"
   - "Meng Qi"
   - "Wei Qi"
-year: 2026
+year: 2025
 category: working-paper
 status: "Reject & Resubmit at Management Science"
 abstract: |

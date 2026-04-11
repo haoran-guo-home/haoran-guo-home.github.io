@@ -6,7 +6,7 @@ authors:
   - "Wei Qi"
   - "Jian Cui"
   - "Zhenning Dong"
-year: 2026
+year: 2025
 category: working-paper
 status: "Major Revision at Management Science"
 abstract: |
