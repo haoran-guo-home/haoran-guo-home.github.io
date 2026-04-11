@@ -22,7 +22,7 @@ const researchEntries = (await getCollection("publications")).sort(
 ---
 
 <BaseLayout description={siteConfig.description}>
-  <section class="intro-section" id="about">
+  <section class="intro-section">
     <div class="intro-grid">
       <div class="intro-copy">
         <h1>{siteConfig.name}</h1>
@@ -81,4 +81,10 @@ const researchEntries = (await getCollection("publications")).sort(
     </div>
     <PublicationList entries={researchEntries} emptyMessage="Add publication Markdown files to show your research." />
   </section>
+
+  <script is:inline>
+    if (typeof history !== "undefined" && history.replaceState && location.hash === "#about") {
+      history.replaceState(null, "", `${location.pathname}${location.search}`);
+    }
+  </script>
 </BaseLayout>

@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Haoran Guo",
-  role: "PhD Student, Management Science (Tsinghua University)",
+  role: "PhD Student, Management Science and Engineering (Tsinghua University)",
   affiliation: "Tsinghua University",
   location: "Beijing, China",
   email: "ghr24@mails.tsinghua.edu.cn",
@@ -12,7 +12,7 @@ export const siteConfig = {
 
 /** 首段含导师外链时使用 HTML；首页用 set:html 渲染 */
 export const bio = [
-  'I am a PhD student at Tsinghua University in the Department of Management Science and Engineering, where my major is Management Science. I am advised by <a href="https://wei-qi-home.github.io/" target="_blank" rel="noreferrer">Wei Qi</a>. Before starting my PhD, I received my B.E. in Industrial Engineering from Tsinghua University.',
+  'I am a PhD student at Tsinghua University. My major is Management Science and Engineering, and I am advised by <a href="https://wei-qi-home.github.io/" target="_blank" rel="noreferrer">Wei Qi</a>. Before starting my PhD, I received my B.E. in Industrial Engineering from Tsinghua University.',
   "My research focuses on smart and sustainable city operations, analytics for social good, and data-driven optimization. This website collects my publications, working papers, and ongoing research projects.",
 ];
 
