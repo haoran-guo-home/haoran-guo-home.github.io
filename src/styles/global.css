@@ -344,7 +344,8 @@ main.container {
 .publication-detail-line {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.875rem;
+  /* 与 .publication-authors-line 一致 */
+  font-size: 0.9375rem;
   font-weight: 300;
 }
 
