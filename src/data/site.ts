@@ -5,7 +5,7 @@ export const siteConfig = {
   location: "Beijing, China",
   email: "ghr24@mails.tsinghua.edu.cn",
   description: "Academic homepage for research on smart and sustainable city operations, analytics for social good, and data-driven optimization.",
-  siteUrl: "https://example.github.io",
+  siteUrl: "https://haoran-guo-home.github.io",
   /** 头像：文件放在 `public/` 下；不需要照片时改为 `null` 则显示首字母占位 */
   avatarUrl: "/profile-photo.png",
 };
