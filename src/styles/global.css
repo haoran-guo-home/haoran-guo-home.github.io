@@ -382,12 +382,18 @@ main.container {
 
 /* 与标题/正文同列同宽（右栏），不跨 badge 列、不撑满视口 */
 .publication-abstract {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
   margin-top: 0.55rem;
 }
 
 .publication-abstract summary {
   display: inline-flex;
   align-items: center;
+  align-self: start;
   cursor: pointer;
   color: var(--accent);
   font-size: 0.78rem;
@@ -404,8 +410,9 @@ main.container {
 }
 
 .publication-abstract-body {
-  margin-top: 0.5rem;
-  padding-left: 0.8rem;
+  margin-top: 0;
+  min-width: 0;
+  padding-left: 0.9rem;
   padding-right: 0;
   border-left: 2px solid var(--border-soft);
   color: #505b66;
@@ -457,6 +464,11 @@ main.container {
 
   .publication-marker {
     padding-top: 0;
+  }
+
+  .publication-abstract {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
   }
 }
 
