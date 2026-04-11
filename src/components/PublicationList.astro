@@ -97,18 +97,21 @@ const detailLine = (entry: CollectionEntry<"publications">) => {
                 ) : null}
 
                 {mediaLinks.length > 0 ? (
-                  <p class="publication-note publication-note--media">
-                    <span class="publication-media-label">Media coverage:</span>{" "}
-                    {mediaLinks.map((m, index) => (
-                      <>
-                        {index > 0 ? "; " : ""}
-                        <a class="publication-inline-link" href={m.href} target="_blank" rel="noreferrer">
-                          {m.label}
-                        </a>
-                        {m.tail ?? ""}
-                      </>
-                    ))}
-                  </p>
+                  <div class="publication-media-block">
+                    <p class="publication-media-heading">
+                      <span class="publication-media-label">Media coverage:</span>
+                    </p>
+                    <ul class="publication-media-list">
+                      {mediaLinks.map((m) => (
+                        <li class="publication-media-item">
+                          <a class="publication-inline-link" href={m.href} target="_blank" rel="noreferrer">
+                            {m.label}
+                          </a>
+                          {m.tail ? <span>{m.tail}</span> : null}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ) : null}
 
                 {entry.data.abstract ? (
