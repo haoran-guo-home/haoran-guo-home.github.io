@@ -91,20 +91,12 @@ main.container {
 }
 
 .intro-copy h1 {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.85rem;
   font-size: clamp(2.25rem, 4.2vw, 2.625rem);
   line-height: 1.05;
   letter-spacing: -0.035em;
   font-weight: 300;
   color: #0a0a0a;
-}
-
-.intro-subtitle {
-  margin-bottom: 1.2rem;
-  color: #3d454d;
-  font-size: clamp(1.05rem, 1.9vw, 1.2rem);
-  line-height: 1.45;
-  font-weight: 300;
 }
 
 .intro-paragraph {
@@ -124,49 +116,6 @@ main.container {
 
 .intro-paragraph a:hover {
   text-decoration: underline;
-}
-
-.research-summary {
-  margin-top: 1.5rem;
-}
-
-.research-summary-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-soft);
-}
-
-.research-summary-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem 0.8rem;
-  margin: 0;
-  padding: 0;
-}
-
-.research-summary-list li {
-  position: relative;
-  padding-left: 0.8rem;
-  color: var(--text-muted);
-  font-size: 0.84rem;
-  line-height: 1.55;
-}
-
-.research-summary-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.8em;
-  width: 0.32rem;
-  height: 0.32rem;
-  border-radius: 999px;
-  background: var(--accent);
-  transform: translateY(-50%);
 }
 
 .profile-column {
@@ -431,14 +380,9 @@ main.container {
   color: #46515f;
 }
 
+/* 与标题/正文同列同宽（右栏），不跨 badge 列、不撑满视口 */
 .publication-abstract {
-  grid-column: 1 / -1;
   margin-top: 0.55rem;
-  box-sizing: border-box;
-  /* 相对主内容区向左伸出，使摘要区接近视口宽度（左右各约 1rem 留白） */
-  width: calc(100vw - 2rem);
-  max-width: none;
-  margin-left: calc(50% - 50vw + 1rem);
 }
 
 .publication-abstract summary {
@@ -462,12 +406,14 @@ main.container {
 .publication-abstract-body {
   margin-top: 0.5rem;
   padding-left: 0.8rem;
-  padding-right: 0.25rem;
+  padding-right: 0;
   border-left: 2px solid var(--border-soft);
   color: #505b66;
   font-size: 0.82rem;
   line-height: 1.6;
   max-width: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .empty-state {

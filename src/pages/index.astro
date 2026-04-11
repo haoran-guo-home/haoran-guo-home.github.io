@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import PublicationList from "../components/PublicationList.astro";
-import { bio, researchAreas, siteConfig, socialLinks } from "../data/site";
+import { bio, siteConfig, socialLinks } from "../data/site";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const withBase = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
@@ -26,21 +26,9 @@ const researchEntries = (await getCollection("publications")).sort(
     <div class="intro-grid">
       <div class="intro-copy">
         <h1>{siteConfig.name}</h1>
-        <p class="intro-subtitle">
-          {siteConfig.role} | {siteConfig.affiliation}
-        </p>
         {bio.map((paragraph) => (
           <p class="intro-paragraph" set:html={paragraph} />
         ))}
-
-        <div class="research-summary">
-          <span class="research-summary-label">Research interests</span>
-          <ul class="research-summary-list" aria-label="Research interests">
-            {researchAreas.map((area) => (
-              <li>{area}</li>
-            ))}
-          </ul>
-        </div>
       </div>
 
       <aside class="profile-column">

@@ -16,12 +16,6 @@ export const bio = [
   "My research focuses on smart and sustainable city operations, analytics for social good, and data-driven optimization. This website collects my publications, working papers, and ongoing research projects.",
 ];
 
-export const researchAreas = [
-  "Smart and Sustainable City Operations Management",
-  "Analytics for Social Good",
-  "Data-Driven Optimization",
-];
-
 export const socialLinks = [
   {
     label: "Email",
