@@ -421,7 +421,8 @@ main.container {
 
 /* 仅在右栏内：摘要按钮与标题、作者行左对齐；正文仍保留左侧竖线与缩进 */
 .publication-abstract {
-  margin: 0;
+  margin-top: 0.42rem;
+  margin-bottom: 0;
 }
 
 .publication-abstract summary {
