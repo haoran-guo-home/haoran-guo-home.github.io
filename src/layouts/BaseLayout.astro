@@ -18,7 +18,10 @@ const pageTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
 const baseUrl = import.meta.env.BASE_URL;
 const withBase = (path: string) => `${baseUrl}${path.replace(/^\//, "")}`;
 const canonicalUrl = new URL(pathname.replace(/^\//, ""), siteConfig.siteUrl).toString();
-const faviconUrl = new URL(withBase("/favicon.png"), siteConfig.siteUrl).toString();
+const faviconVersion = "20260412";
+const faviconSvgPath = `${withBase("/favicon.svg")}?v=${faviconVersion}`;
+const faviconPngPath = `${withBase("/favicon.png")}?v=${faviconVersion}`;
+const faviconUrl = new URL(faviconPngPath, siteConfig.siteUrl).toString();
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -37,8 +40,10 @@ const websiteSchema = {
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="icon" type="image/png" href={withBase("/favicon.png")} />
-    <link rel="shortcut icon" href={withBase("/favicon.png")} />
+    <link rel="icon" type="image/svg+xml" sizes="any" href={faviconSvgPath} />
+    <link rel="icon" type="image/png" href={faviconPngPath} />
+    <link rel="shortcut icon" href={faviconPngPath} />
+    <link rel="apple-touch-icon" href={faviconPngPath} />
     <meta name="application-name" content={siteConfig.siteName} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:site_name" content={siteConfig.siteName} />

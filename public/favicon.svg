@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Haoran Guo favicon</title>
+  <circle cx="32" cy="32" r="28" fill="#ffffff" stroke="#6f1d77" stroke-width="3.5" />
+  <path
+    d="M14 18H22V29H31V18H39V46H31V35H22V46H14Z"
+    fill="#ffffff"
+    stroke="#6f1d77"
+    stroke-linejoin="round"
+    stroke-width="2.5"
+  />
+  <path
+    d="M54 26C52 21 48 18 42 18C34 18 29 24 29 32C29 40 34 46 42 46C47 46 52 43 54 39V34H46"
+    fill="none"
+    stroke="#6f1d77"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="5"
+  />
+</svg>
