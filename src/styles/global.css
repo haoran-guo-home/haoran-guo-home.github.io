@@ -86,7 +86,7 @@ main.container {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.72fr);
+  grid-template-columns: minmax(0, 1.38fr) minmax(230px, 0.78fr);
   gap: 2.4rem;
   align-items: start;
 }
@@ -485,7 +485,7 @@ main.container {
 
   .profile-links,
   .profile-photo-shell {
-    width: min(100%, 260px);
+    width: min(100%, 250px);
   }
 
   .profile-links {
