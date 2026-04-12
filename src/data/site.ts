@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "Haoran Guo",
+  siteName: "Haoran Guo",
   role: "PhD Student, Management Science and Engineering (Tsinghua University)",
   affiliation: "Tsinghua University",
   location: "Beijing, China",
