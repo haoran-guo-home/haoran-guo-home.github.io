@@ -86,7 +86,7 @@ main.container {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.75fr) minmax(220px, 0.72fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.72fr);
   gap: 2.4rem;
   align-items: start;
 }
@@ -101,7 +101,7 @@ main.container {
 }
 
 .intro-paragraph {
-  max-width: 34rem;
+  max-width: 38rem;
   margin-bottom: 0.8rem;
   color: #303741;
   font-size: 1rem;
