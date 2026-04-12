@@ -344,13 +344,14 @@ main.container {
 }
 
 .publication-authors-line {
+  margin-bottom: 0.42rem;
   color: #3f4852;
   font-size: 0.9375rem;
   font-weight: 400;
 }
 
 .publication-detail-line {
-  margin: 0;
+  margin-top: 0;
   color: var(--text-muted);
   /* 与 .publication-authors-line 一致 */
   font-size: 0.9375rem;
