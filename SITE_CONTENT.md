@@ -49,7 +49,7 @@ avatarUrl: /profile-photo.png
 
 1.
 
-I am a PhD student in Management Science and Engineering at Tsinghua University, advised by [Prof. Wei Qi](https://wei-qi-home.github.io/). Prior to my doctoral studies, I received a B.E. in Industrial Engineering from Tsinghua University in 2024.
+I am a PhD student in Management Science and Engineering at Tsinghua University, advised by [Prof. Wei Qi](https://wei-qi-home.github.io/). Prior to my doctoral studies, I received a B.S. in Industrial Engineering from Tsinghua University in 2024.
 
 2.
 
