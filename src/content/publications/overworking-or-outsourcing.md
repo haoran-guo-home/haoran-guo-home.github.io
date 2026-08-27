@@ -1,5 +1,5 @@
 ---
-title: "Overworking or Outsourcing: Integrated Prediction-Optimization for Overtime Control with Application in Last-Mile Delivery"
+title: "Overworking or Outsourcing: Integrated Prediction and Optimization for Managing Overtime under Uncertainty"
 authors:
   - "Haoran Guo"
   - "Meng Qi"
@@ -14,6 +14,8 @@ links:
 bullets:
   - highlight: "Winner,"
     text: "INFORMS Transportation Science & Logistics (TSL) Best Student Paper Award, 2025"
+  - highlight: "Finalist,"
+    text: "IISE DAIS Division Best Student Paper Competition, 2024"
 featured: true
 ---
 

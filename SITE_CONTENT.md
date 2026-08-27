@@ -33,7 +33,7 @@ location: Beijing, China
 email: ghr24@mails.tsinghua.edu.cn
 description: Academic homepage for research on data-driven urban operations, walkable and inclusive cities, and analytics for social good.
 siteUrl: https://haoran-guo-home.github.io
-updatedAt: April 12, 2026
+updatedAt: August 27, 2026
 avatarUrl: /profile-photo.png
 ```
 
@@ -78,7 +78,7 @@ Footer 当前显示三项：
 
 1. `Haoran Guo`
 2. `Tsinghua University`
-3. `Updated: April 12, 2026`
+3. `Updated: August 27, 2026`
 
 ### 5. Research 区块展示规则
 
@@ -118,7 +118,7 @@ featured: true
 ```yaml
 slug: state-capacity-and-firm-adjustment
 sourceFile: src/content/publications/state-capacity-and-firm-adjustment.md
-title: Data-Driven Facility Layout for Enhancing Walk Appeal in Walkable Neighborhoods
+title: Designing Walkable Neighborhoods: A Data-Driven Optimization Framework
 authors:
   - Haoran Guo
   - Sentao Miao
@@ -133,6 +133,8 @@ abstract: |
 links:
   paper: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5356595
 bullets:
+  - highlight: "Winner,"
+    text: CSAMSE Best Paper Award, 2026
   - highlight: "Finalist,"
     text: INFORMS Public Sector Operations Research (PSOR) Best Paper Award, 2025
 mediaLinks:
@@ -153,7 +155,7 @@ featured: true
 ```yaml
 slug: overworking-or-outsourcing
 sourceFile: src/content/publications/overworking-or-outsourcing.md
-title: Overworking or Outsourcing: Integrated Prediction-Optimization for Overtime Control with Application in Last-Mile Delivery
+title: Overworking or Outsourcing: Integrated Prediction and Optimization for Managing Overtime under Uncertainty
 authors:
   - Haoran Guo
   - Meng Qi
@@ -168,6 +170,8 @@ links:
 bullets:
   - highlight: "Winner,"
     text: INFORMS Transportation Science & Logistics (TSL) Best Student Paper Award, 2025
+  - highlight: "Finalist,"
+    text: IISE DAIS Division Best Student Paper Competition, 2024
 featured: true
 ```
 

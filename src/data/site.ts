@@ -7,7 +7,7 @@ export const siteConfig = {
   email: "ghr24@mails.tsinghua.edu.cn",
   description: "Academic homepage for research on data-driven urban operations, walkable and inclusive cities, and analytics for social good.",
   siteUrl: "https://haoran-guo-home.github.io",
-  updatedAt: "April 12, 2026",
+  updatedAt: "August 27, 2026",
   /** 头像：文件放在 `public/` 下；不需要照片时改为 `null` 则显示首字母占位 */
   avatarUrl: "/profile-photo.png",
 };

@@ -1,5 +1,5 @@
 ---
-title: "Data-Driven Facility Layout for Enhancing Walk Appeal in Walkable Neighborhoods"
+title: "Designing Walkable Neighborhoods: A Data-Driven Optimization Framework"
 authors:
   - "Haoran Guo"
   - "Sentao Miao"
@@ -14,6 +14,8 @@ abstract: |
 links:
   paper: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5356595"
 bullets:
+  - highlight: "Winner,"
+    text: "CSAMSE Best Paper Award, 2026"
   - highlight: "Finalist,"
     text: "INFORMS Public Sector Operations Research (PSOR) Best Paper Award, 2025"
 mediaLinks:
