@@ -31,9 +31,9 @@ role: PhD Student, Management Science and Engineering (Tsinghua University)
 affiliation: Tsinghua University
 location: Beijing, China
 email: ghr24@mails.tsinghua.edu.cn
-description: Academic homepage for research on data-driven urban operations, walkable and inclusive cities, and analytics for social good.
+description: Academic homepage for research on smart-city operations, data-driven optimization, and analytics for social good.
 siteUrl: https://haoran-guo-home.github.io
-updatedAt: August 27, 2026
+updatedAt: September 3, 2026
 avatarUrl: /profile-photo.png
 ```
 
@@ -53,7 +53,7 @@ I am a PhD student in Management Science and Engineering at Tsinghua University,
 
 2.
 
-My research interests include data-driven urban operations, walkable and inclusive cities, and analytics for social good.
+My research interests include smart-city operations, data-driven optimization, and analytics for social good.
 
 ### 3. 首页右侧个人信息卡
 
