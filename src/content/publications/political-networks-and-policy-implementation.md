@@ -10,6 +10,7 @@ category: work-in-progress
 status: "Work in Progress"
 abstract: "Rethinking inclusive accessibility through mobile amenities in the context of the 15-minute city."
 featured: true
+hidden: true
 ---
 
 与 2026 年 3 月简历中的条目一致。

@@ -12,7 +12,7 @@ const categoryOrder = {
 } as const;
 const profileLinks = socialLinks.filter((link) => !link.href.startsWith("mailto:"));
 
-const researchEntries = (await getCollection("publications")).sort(
+const researchEntries = (await getCollection("publications", ({ data }) => !data.hidden)).sort(
   (left, right) =>
     Number(right.data.featured ?? false) - Number(left.data.featured ?? false) ||
     right.data.year - left.data.year ||

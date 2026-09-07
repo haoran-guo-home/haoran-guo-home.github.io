@@ -44,6 +44,7 @@ const publications = defineCollection({
       .optional(),
     links: publicationLinksSchema.optional().default({}),
     featured: z.boolean().optional().default(false),
+    hidden: z.boolean().optional().default(false),
   }),
 });
 

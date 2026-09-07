@@ -84,6 +84,7 @@ Footer 当前显示三项：
 
 - 区块标题：`Research`
 - Research 条目来自 `src/content/publications/`
+- `hidden: true` 的条目暂不在网站显示；恢复展示时移除该设置或改为 `false`。
 - 当前排序规则如下：
   - `featured: true` 的条目优先
   - 再按 `year` 从大到小
@@ -93,7 +94,7 @@ Footer 当前显示三项：
 
 ### 6. Research 条目
 
-以下顺序即当前首页实际显示顺序。
+以下按首页排序规则列出条目；标记 `hidden: true` 的条目保留在内容主稿中，暂不展示。
 
 #### 条目 1
 
@@ -111,6 +112,7 @@ category: work-in-progress
 status: Work in Progress
 abstract: Rethinking inclusive accessibility through mobile amenities in the context of the 15-minute city.
 featured: true
+hidden: true
 ```
 
 #### 条目 2
