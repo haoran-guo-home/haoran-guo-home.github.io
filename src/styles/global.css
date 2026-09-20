@@ -352,7 +352,7 @@ main.container {
 
 .publication-detail-line {
   margin-top: 0;
-  color: var(--text-muted);
+  color: #3f4852;
   /* 与 .publication-authors-line 一致 */
   font-size: 0.9375rem;
   font-weight: 300;
