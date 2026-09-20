@@ -288,16 +288,14 @@ main.container {
 }
 
 .publication-body {
+  display: grid;
+  gap: 0.42rem;
   min-width: 0;
 }
 
 .publication-body > * {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.publication-body > * + * {
-  margin-top: 0.42rem;
 }
 
 .publication-topline {
@@ -343,19 +341,11 @@ main.container {
   color: #102d50;
 }
 
-.publication-authors-line {
-  margin-bottom: 0.42rem;
+.publication-authors-line,
+.publication-detail-line {
   color: #3f4852;
   font-size: 0.9375rem;
   font-weight: 400;
-}
-
-.publication-detail-line {
-  margin-top: 0;
-  color: #3f4852;
-  /* 与 .publication-authors-line 一致 */
-  font-size: 0.9375rem;
-  font-weight: 300;
 }
 
 .publication-notes {
@@ -370,6 +360,14 @@ main.container {
   font-style: italic;
   font-weight: 300;
   line-height: 1.5;
+}
+
+.publication-note:first-child {
+  margin-top: 0;
+}
+
+.publication-note:last-child {
+  margin-bottom: 0;
 }
 
 .publication-award {
@@ -421,7 +419,7 @@ main.container {
 
 /* 仅在右栏内：摘要按钮与标题、作者行左对齐；正文仍保留左侧竖线与缩进 */
 .publication-abstract {
-  margin-top: 0.42rem;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
