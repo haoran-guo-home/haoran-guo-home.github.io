@@ -348,6 +348,10 @@ main.container {
   font-weight: 400;
 }
 
+.publication-authors-line {
+  font-weight: 300;
+}
+
 .publication-notes {
   margin: 0;
 }
