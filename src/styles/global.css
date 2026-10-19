@@ -358,10 +358,10 @@ main.container {
 
 .publication-note {
   margin: 0.1rem 0;
-  color: #7a8088;
+  color: #3f4852;
   /* 与 .publication-authors-line 一致，便于阅读奖项与媒体报道 */
   font-size: 0.9375rem;
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -390,11 +390,16 @@ main.container {
   margin: 0;
 }
 
+.publication-notes + .publication-media-block {
+  /* Reduce the 0.42rem grid gap to the 0.1rem gap between award lines. */
+  margin-top: -0.32rem;
+}
+
 .publication-media-heading {
   margin: 0 0 0.2rem;
-  color: #7a8088;
+  color: #3f4852;
   font-size: 0.9375rem;
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -402,9 +407,9 @@ main.container {
 .publication-media-list {
   margin: 0;
   padding-left: 1.2rem;
-  color: #7a8088;
+  color: #3f4852;
   font-size: 0.9375rem;
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -414,7 +419,7 @@ main.container {
 }
 
 .publication-inline-link {
-  color: #6a7380;
+  color: inherit;
 }
 
 .publication-inline-link:hover {
