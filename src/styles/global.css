@@ -385,37 +385,19 @@ main.container {
   font-weight: 300;
 }
 
-/* 媒体报道：与条目说明风格一致，逐条分行 */
+/* 媒体报道：按媒体名称在同一段中展示，窄屏自然换行 */
 .publication-media-block {
   margin: 0;
+  color: #3f4852;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 .publication-notes + .publication-media-block {
   /* Reduce the 0.42rem grid gap to the 0.1rem gap between award lines. */
   margin-top: -0.32rem;
-}
-
-.publication-media-heading {
-  margin: 0 0 0.2rem;
-  color: #3f4852;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-.publication-media-list {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: #3f4852;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-.publication-media-item {
-  margin: 0.12rem 0;
 }
 
 .publication-inline-link {

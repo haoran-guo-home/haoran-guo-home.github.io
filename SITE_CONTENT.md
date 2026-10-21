@@ -95,6 +95,7 @@ Footer 当前显示三项：
   - 再按类别顺序：`publication` → `working-paper` → `work-in-progress`
   - 最后按标题字母序
 - 当前所有条目都设置了 `featured: true`
+- Media Coverage 在同一段中按媒体名称列出链接，以分号分隔；不展示报道标题。
 
 ### 6. Research 条目
 
@@ -144,15 +145,12 @@ bullets:
   - highlight: "Finalist,"
     text: INFORMS Public Sector Operations Research (PSOR) Best Paper Award, 2025
 mediaLinks:
-  - label: "高德联合清华大学最新研究：光“近”还不够！通过技术为商户打造零售选址新范式"
-    href: https://mp.weixin.qq.com/s/ByaVhK6lohgq2G5QtP098w
-    tail: " (in Chinese), 高德技术"
-  - label: "清华团队出手：如何让人心甘情愿地逛街？"
-    href: https://mp.weixin.qq.com/s/7Gi8ArSUbtNLDKal1-XxnQ
-    tail: " (in Chinese), Mall先生"
-  - label: Why walkable neighborhoods aren't just about distance
+  - label: CU Boulder Today
     href: https://www.colorado.edu/today/2026/03/11/why-walkable-neighborhoods-arent-just-about-distance
-    tail: ", CU Boulder Today"
+  - label: Amap (in Chinese)
+    href: https://mp.weixin.qq.com/s/ByaVhK6lohgq2G5QtP098w
+  - label: Mr. Mall (in Chinese)
+    href: https://mp.weixin.qq.com/s/7Gi8ArSUbtNLDKal1-XxnQ
 featured: true
 ```
 
