@@ -31,9 +31,9 @@ role: PhD Student, Management Science and Engineering (Tsinghua University)
 affiliation: Tsinghua University
 location: Beijing, China
 email: ghr24@mails.tsinghua.edu.cn
-description: Academic homepage for research on smart-city operations, data-driven optimization, and analytics for social good.
+description: Academic homepage for research on walkable city operations, sustainable urban operations, data-driven optimization, and analytics for social good.
 siteUrl: https://haoran-guo-home.github.io
-updatedAt: September 20, 2026
+updatedAt: November 5, 2026
 avatarUrl: /profile-photo.png
 ```
 
@@ -49,7 +49,7 @@ avatarUrl: /profile-photo.png
 
 1.
 
-I am a PhD student in Management Science and Engineering at Tsinghua University, where I am fortunate to be advised by [Prof. Wei Qi](https://wei-qi-home.github.io/). Prior to my doctoral studies, I received a B.S. in Industrial Engineering from Tsinghua University in 2024.
+I am a third-year PhD student in Management Science and Engineering at Tsinghua University, where I am fortunate to be advised by [Prof. Wei Qi](https://wei-qi-home.github.io/). Prior to my doctoral studies, I received a B.E. in Industrial Engineering from Tsinghua University in 2024.
 
 2.
 
@@ -57,7 +57,7 @@ I am currently visiting the Cornell SC Johnson College of Business, hosted by [P
 
 3.
 
-My research interests include smart-city operations, data-driven optimization, and analytics for social good.
+My research interests include sustainable urban operations, data-driven optimization, and analytics for social good, with a primary focus on walkable city operations.
 
 ### 3. 首页右侧个人信息卡
 
@@ -82,7 +82,7 @@ Footer 当前显示三项：
 
 1. `Haoran Guo`
 2. `Tsinghua University`
-3. `Updated: September 20, 2026`
+3. `Updated: November 5, 2026`
 
 ### 5. Research 区块展示规则
 
