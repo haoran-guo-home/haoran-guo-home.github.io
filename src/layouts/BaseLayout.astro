@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../data/site";
+import "@fontsource-variable/inter";
 import "../styles/global.css";
 
 interface Props {
@@ -64,8 +65,7 @@ const websiteSchema = {
 
       <footer class="site-footer">
         <div class="container footer-inner">
-          <p>{siteConfig.name}</p>
-          <p>{siteConfig.affiliation}</p>
+          <p>{siteConfig.name} · {siteConfig.affiliation}</p>
           <p>Updated: {siteConfig.updatedAt}</p>
         </div>
       </footer>
