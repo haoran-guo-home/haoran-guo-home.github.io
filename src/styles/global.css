@@ -110,7 +110,7 @@ main.container {
 }
 
 .intro-paragraph a {
-  color: #0b57d0;
+  color: var(--accent);
   font-weight: 400;
   text-decoration: none;
 }
@@ -171,10 +171,8 @@ main.container {
   display: inline-block;
   margin-bottom: 0.6rem;
   color: #2f3740;
-  font-family: ui-monospace, "Cascadia Code", Consolas, "SFMono-Regular", Menlo, monospace;
   font-size: 0.875rem;
   font-weight: 400;
-  letter-spacing: 0.01em;
 }
 
 .profile-email:hover {
@@ -183,9 +181,9 @@ main.container {
 
 .profile-link-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 0.4rem 0.55rem;
+  gap: 0.4rem;
 }
 
 .profile-link {
@@ -193,7 +191,8 @@ main.container {
   align-items: center;
   justify-content: center;
   min-height: 1.8rem;
-  padding: 0.2rem 0.6rem;
+  padding: 0.2rem 0.55rem;
+  white-space: nowrap;
   border: 1px solid var(--border);
   border-radius: 999px;
   color: var(--accent);
@@ -225,6 +224,18 @@ main.container {
   color: #0a0a0a;
 }
 
+.research-group + .research-group {
+  margin-top: 2rem;
+}
+
+.research-group-heading {
+  margin: 0 0 1.1rem;
+  color: #161c22;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
 .publication-list {
   list-style: none;
   display: grid;
@@ -246,7 +257,7 @@ main.container {
 
 .publication-entry-inner {
   display: grid;
-  grid-template-columns: 118px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
   line-height: 1.58;
@@ -376,8 +387,8 @@ main.container {
 
 .publication-award {
   margin-right: 0.2rem;
-  color: #8a6a22;
-  font-weight: 300;
+  color: #161c22;
+  font-weight: 500;
 }
 
 .publication-media-label {
@@ -401,11 +412,11 @@ main.container {
 }
 
 .publication-inline-link {
-  color: inherit;
+  color: var(--accent);
 }
 
 .publication-inline-link:hover {
-  color: #46515f;
+  color: var(--accent-strong);
 }
 
 /* 仅在右栏内：摘要按钮与标题、作者行左对齐；正文仍保留左侧竖线与缩进 */

@@ -12,6 +12,13 @@ const categoryOrder = {
 } as const;
 const profileLinks = socialLinks.filter((link) => !link.href.startsWith("mailto:"));
 
+const categoryHeadings = {
+  "working-paper": "Working Papers",
+  publication: "Publications",
+  "work-in-progress": "Work in Progress",
+} as const;
+const groupOrder = ["working-paper", "publication", "work-in-progress"] as const;
+
 const researchEntries = (await getCollection("publications", ({ data }) => !data.hidden)).sort(
   (left, right) =>
     Number(right.data.featured ?? false) - Number(left.data.featured ?? false) ||
@@ -79,7 +86,19 @@ const researchEntries = (await getCollection("publications", ({ data }) => !data
         <h2>Research</h2>
       </div>
     </div>
-    <PublicationList entries={researchEntries} emptyMessage="Add publication Markdown files to show your research." />
+    {researchEntries.length > 0 ? (
+      groupOrder
+        .map((category) => ({ category, entries: researchEntries.filter((entry) => entry.data.category === category) }))
+        .filter((group) => group.entries.length > 0)
+        .map((group) => (
+          <div class="research-group">
+            <h3 class="research-group-heading">{categoryHeadings[group.category]}</h3>
+            <PublicationList entries={group.entries} />
+          </div>
+        ))
+    ) : (
+      <PublicationList entries={[]} emptyMessage="Add publication Markdown files to show your research." />
+    )}
   </section>
 
   <script is:inline>

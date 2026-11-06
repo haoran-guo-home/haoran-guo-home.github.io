@@ -96,6 +96,8 @@ Footer 当前显示三项：
   - 最后按标题字母序
 - 当前所有条目都设置了 `featured: true`
 - Media Coverage 在同一段中按媒体名称列出链接，以分号分隔；不展示报道标题。
+- Research 下按类别分组显示小标题：`Working Papers` → `Publications` → `Work in Progress`；条目左侧不再显示类别徽章。
+- 状态行中 `at` 之后的期刊名以斜体显示，在审论文不附年份；SSRN 链接按钮显示为 `SSRN`。
 
 ### 6. Research 条目
 

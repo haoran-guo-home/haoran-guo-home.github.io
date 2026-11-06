@@ -8,12 +8,6 @@ interface Props {
 
 const { entries, emptyMessage = "No entries available yet." } = Astro.props;
 
-const categoryLabels = {
-  publication: "Publication",
-  "working-paper": "Working Paper",
-  "work-in-progress": "Work in Progress",
-} as const;
-
 const linkLabels = {
   paper: "Paper",
   preprint: "Preprint",
@@ -29,23 +23,31 @@ const getLinks = (entry: CollectionEntry<"publications">) =>
       typeof item[1] === "string" && item[1].length > 0,
   );
 
+/** 按钮文字：SSRN 链接显示为 "SSRN"，其余用默认标签 */
+const linkLabel = (key: keyof typeof linkLabels, href: string) =>
+  key === "paper" && href.includes("ssrn.com") ? "SSRN" : linkLabels[key];
+
 /** 作者行：保持完整作者列表，方便学术主页直接展示 */
 const formatAuthorsLine = (authors: string[]) => {
   if (authors.length === 0) return "";
   return authors.join(", ");
 };
 
-/** 期刊 / 状态行：统一压成一行，贴近参考样式 */
+/** 期刊 / 状态行：期刊名斜体；在审论文只写状态，不加年份 */
+const escapeHtml = (text: string) =>
+  text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 const detailLine = (entry: CollectionEntry<"publications">) => {
   const { category, venue, status, year } = entry.data;
   if (category === "publication" && venue) {
-    return `${venue}, ${year}`;
+    return `<em>${escapeHtml(venue)}</em>, ${year}`;
   }
   if (status) {
-    return `${status}${venue ? `, ${venue}` : ""}${year ? `, ${year}` : ""}`;
+    const match = status.match(/^(.*\sat\s)(.+)$/);
+    return match ? `${escapeHtml(match[1])}<em>${escapeHtml(match[2])}</em>` : escapeHtml(status);
   }
   if (venue) {
-    return `${venue}, ${year}`;
+    return `<em>${escapeHtml(venue)}</em>, ${year}`;
   }
   return String(year);
 };
@@ -62,11 +64,6 @@ const detailLine = (entry: CollectionEntry<"publications">) => {
         <li class="publication-entry">
           <article class="publication-entry-inner">
             <div class="publication-layout">
-              <div class="publication-marker">
-                <span class={`publication-badge publication-badge--${entry.data.category}`}>
-                  {categoryLabels[entry.data.category]}
-                </span>
-              </div>
 
               <div class="publication-body">
                 <div class="publication-topline">
@@ -75,7 +72,7 @@ const detailLine = (entry: CollectionEntry<"publications">) => {
                     <div class="publication-links">
                       {links.map(([key, href]) => (
                         <a class="publication-link-button" href={href} target="_blank" rel="noreferrer">
-                          {linkLabels[key]}
+                          {linkLabel(key, href)}
                         </a>
                       ))}
                     </div>
@@ -83,7 +80,7 @@ const detailLine = (entry: CollectionEntry<"publications">) => {
                 </div>
 
                 <p class="publication-authors-line">{formatAuthorsLine(entry.data.authors)}</p>
-                <p class="publication-detail-line">{detailLine(entry)}</p>
+                <p class="publication-detail-line" set:html={detailLine(entry)} />
 
                 {bullets.length > 0 ? (
                   <div class="publication-notes">
