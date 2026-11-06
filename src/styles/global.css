@@ -229,11 +229,22 @@ main.container {
 }
 
 .research-group-heading {
-  margin: 0 0 1rem;
-  color: #161c22;
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: -0.015em;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0 0 1.1rem;
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.research-group-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
 }
 
 .publication-list {
@@ -319,7 +330,7 @@ main.container {
   margin: 0;
   color: #161c22;
   font-size: 1.0625rem;
-  line-height: 1.45;
+  line-height: 1.4;
   font-weight: 500;
   letter-spacing: -0.012em;
 }
@@ -359,20 +370,21 @@ main.container {
 }
 
 .publication-authors-line {
-  margin-top: 0.25rem;
+  margin-top: 0;
   color: var(--text-muted);
 }
 
 .publication-detail-line {
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
+/* 条目内只有两档间距：组内 0，组间 10px（标题组 / 奖项组 / Abstract） */
 .publication-notes {
-  margin: 0.75rem 0 0;
+  margin: 0.625rem 0 0;
 }
 
 .publication-note {
-  margin: 0.1rem 0;
+  margin: 0;
   color: #3f4852;
   /* 与 .publication-authors-line 一致，便于阅读奖项与媒体报道 */
   font-size: 0.9375rem;
@@ -408,12 +420,12 @@ main.container {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  margin-top: 0.75rem;
+  margin-top: 0.625rem;
 }
 
 .publication-notes + .publication-media-block {
   /* 紧接奖项行，作为同一组 */
-  margin-top: 0.1rem;
+  margin-top: 0;
 }
 
 .publication-inline-link {
@@ -426,7 +438,7 @@ main.container {
 
 /* 仅在右栏内：摘要按钮与标题、作者行左对齐；正文仍保留左侧竖线与缩进 */
 .publication-abstract {
-  margin-top: 1rem;
+  margin-top: 0.625rem;
   margin-bottom: 0;
 }
 
